@@ -39,15 +39,14 @@
     <span class="token keyword">return</span> maxValue<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
 <ol>
-<li><strong>maxPartitionSum</strong> - 중요한건 음수가 나오는 곳인데, 이 음수를 포용해서 가져갈 것이냐 아니면 해당 수의 절댓값이 너무 커서 끊고 그 다음 수부터 새로 subarray를 만들것이냐 판단을 해야한다.</li>
-</ol>
+<li>
+<p><strong>maxPartitionSum</strong> - 중요한건 음수가 나오는 곳인데, 이 음수를 포용해서 가져갈 것이냐 아니면 해당 수의 절댓값이 너무 커서 끊고 그 다음 수부터 새로 subarray를 만들것이냐 판단을 해야한다.</p>
 <p>판단하는 방법은, <em>해당 수까지의 최고의 합 + 다음 수</em> 와 <em>다음 수</em> 중 큰 것을 다음 누적 합계로 사용한다.</p>
 <ul>
 <li>만약 <em>해당 수까지의 최고의 합 + 다음 수</em> 가 더 크면, 당연히 포함 하는게 더 이득,</li>
 <li>만약 다음수 자체가 더 크다면 그 음수의 영향이 너무 커서 전체 합을 잡아먹는 것이므로 버리는 게 낫다.</li>
 </ul>
-<p></p>
-<ol start="2">
+</li>
 <li><strong>maxValue</strong> - 위에서 계산된 maxPartitionSum이 결국 그 index에서 최고의 subarray sum 값을 나타내므로, maxPartitionSum 값으로 계속 max를 업데이트 한다.</li>
 </ol>
 <h3>Example</h3>
