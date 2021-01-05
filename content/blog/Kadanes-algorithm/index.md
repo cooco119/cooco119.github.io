@@ -1,11 +1,9 @@
 ---
-title: Kadane's Algorithm
+title: "Kadane's Algorithm"
 date: "2021-01-05"
 description: "How to find subarray that has maximum sum?"
 tag: ["algorithm", "algoexpert"]
 ---
-# Kadane's Algorithm
-
 > unsorted int array가 있을 때, 이 array의 subarray 중 sum이 가장 큰 subarray를 구하는 방법, Time: O(N), Space: O(1)
 
 ## My first approach
@@ -13,10 +11,13 @@ tag: ["algorithm", "algoexpert"]
 '뭔가 DP를 사용하면 되지 않을까?' 해서 array를 순회하면서 가장 최고의 값을 계속 업데이트 하도록 했다. 
 
 - 초기화
+
 <img src="https://latex.codecogs.com/svg.latex?&space;dp=array" title="\Large dp=array">
 
 - Subproblem
+
 <img src="https://latex.codecogs.com/svg.latex?&space;dp[i]|_{i=1}^{i=length}=Max(dp[i-1], \sum_{j=0}^idp[j],dp[i])|_{i=1}^{i=length}" title="\Large dp[i] = Max(dp[i-1], \sum_{j=0}^idp[j],dp[i])">
+
 <span style="color:#aaaaaa; text">~~_수식이 조금 이상하지만 내가 표현할 수 있는 최선인듯..?_~~</span>
 
 ```java
@@ -58,28 +59,33 @@ public static int kadanesAlgorithm(int[] array) {
 - 만약 _해당 수까지의 최고의 합 + 다음 수_ 가 더 크면, 당연히 포함 하는게 더 이득,
 - 만약 다음수 자체가 더 크다면 그 음수의 영향이 너무 커서 전체 합을 잡아먹는 것이므로 버리는 게 낫다.
 
+<p></p>
+
 2. **maxValue** - 위에서 계산된 maxPartitionSum이 결국 그 index에서 최고의 subarray sum 값을 나타내므로, maxPartitionSum 값으로 계속 max를 업데이트 한다.
 
 
 ### Example
 
 다음의 array가 있다고 해보자.
-
 ([AlgoExpert](https://www.algoexpert.io/) 문제의 Sample 값이다.)
 
 <img src="./ex-arr.png" title="example-array">
 
 &nbsp;
+
 쪼갤 가능성이 있는 점은 바로 음수인 지점이다.
 
 <img src="./ex-arr1.png" title="negs">
 
 &nbsp;
 
+#### 처음 -9에서 쪼갤지 말지를 결정해보자
+
 &nbsp;
 
-#### 처음 -9에서 쪼갤지 말지를 결정해보자
 <img src="./ex-arr2.png" title="to -9">
+
+&nbsp;
 
 -9까지의 _maxPartitionSum_ 를 구해왔다면 3 + 5 - 9 = -1일 것이다.
 따라서 다음 _maxPartitionSum_ 는 -1 + 1 = 0 과 1 자체 중 큰 수인 1이 된다.
@@ -92,7 +98,11 @@ public static int kadanesAlgorithm(int[] array) {
 
 #### 다음으로 -2에서 쪼갤지 말 지 생각해보자
 
+&nbsp;
+
 <img src="./ex-arr3.png" title="to -2">
+
+&nbsp;
 
 -2 까지의 _maxPartitionSum_ 을 구하면 1 + 3 + -2 = 2 이다. 
 따라서 다음 _maxPartitionSum_ 는 2 + 3 = 5와 3 중 큰 수인 5가 된다.
@@ -103,7 +113,11 @@ public static int kadanesAlgorithm(int[] array) {
 
 #### 또다시 만난 -9에서는 어떻게 될까?
 
-<img src="./ex-arr4.png" title="to -2">
+&nbsp;
+
+<img src="./ex-arr4.png" title="to another -9">
+
+&nbsp;
 
 여기서도 -9 까지의 _maxPartitionSum_ 을 구하면 1 + 3 -2 + 3 + 4 + 7 + 2 - 9 = 9 이다. 따라서 다음 _maxPartitionSum_ 은 9 + 6 = 15 와 6 중 큰 수인 15가 된다.
 
@@ -111,7 +125,11 @@ public static int kadanesAlgorithm(int[] array) {
 
 #### 마지막, -5에서는?
 
-<img src="./ex-arr5.png" title="to -2">
+&nbsp;
+
+<img src="./ex-arr5.png" title="to -5">
+
+&nbsp;
 
 똑같이 -5 까지의 _maxPartitionSum_을 구하면 15 + 3 + 1 -5 = 14, 다음 값은 14 + 4 와 4 중 큰 값인 14로 넘어간다. 
 
@@ -122,6 +140,8 @@ public static int kadanesAlgorithm(int[] array) {
 따라서 결과는 다음 sub array의 합계인 19가 될 것이다.
 
 <img src="./ex-arr6.png" title="result">
+
+&nbsp;
 
 Time Complexity는 1회만 iterate 했으므로 O(N), Space Complexity는 _maxPartitionSum_ 및 _maxValue_ 의 두 상수만 사용했으므로 O(1) 이다.
 
