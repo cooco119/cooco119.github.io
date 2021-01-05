@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cooco119 Blog]]></title><description><![CDATA[Cooco119 Blog]]></description><link>https://cooco119.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 05 Jan 2021 16:15:42 GMT</lastBuildDate><item><title><![CDATA[Kadane's Algorithm]]></title><description><![CDATA[Kadane’s Algorithm unsorted int array가 있을 때, 이 array의 subarray 중 sum이 가장 큰 subarray를 구하는 방법, Time: O(N), Space: O(1) My first approach…]]></description><link>https://cooco119.github.io/Kadanes-algorithm/</link><guid isPermaLink="false">https://cooco119.github.io/Kadanes-algorithm/</guid><pubDate>Tue, 05 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Kadane’s Algorithm&lt;/h1&gt;
-&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cooco119 Blog]]></title><description><![CDATA[Cooco119 Blog]]></description><link>https://cooco119.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 05 Jan 2021 16:59:42 GMT</lastBuildDate><item><title><![CDATA[Kadane's Algorithm]]></title><description><![CDATA[unsorted int array가 있을 때, 이 array의 subarray 중 sum이 가장 큰 subarray를 구하는 방법, Time: O(N), Space: O(1) My first approach ‘뭔가 DP…]]></description><link>https://cooco119.github.io/Kadanes-algorithm/</link><guid isPermaLink="false">https://cooco119.github.io/Kadanes-algorithm/</guid><pubDate>Tue, 05 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;unsorted int array가 있을 때, 이 array의 subarray 중 sum이 가장 큰 subarray를 구하는 방법, Time: O(N), Space: O(1)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;My first approach&lt;/h2&gt;
 &lt;p&gt;‘뭔가 DP를 사용하면 되지 않을까?’ 해서 array를 순회하면서 가장 최고의 값을 계속 업데이트 하도록 했다. &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;초기화
-&lt;img src=&quot;https://latex.codecogs.com/svg.latex?&amp;amp;space;dp=array&quot; title=&quot;\Large dp=array&quot;&gt;&lt;/li&gt;
-&lt;li&gt;Subproblem
-&lt;img src=&quot;https://latex.codecogs.com/svg.latex?&amp;amp;space;dp[i]|_{i=1}^{i=length}=Max(dp[i-1], \sum_{j=0}^idp[j],dp[i])|_{i=1}^{i=length}&quot; title=&quot;\Large dp[i] = Max(dp[i-1], \sum_{j=0}^idp[j],dp[i])&quot;&gt;
-&lt;span style=&quot;color:#aaaaaa; text&quot;&gt;&lt;del&gt;&lt;em&gt;수식이 조금 이상하지만 내가 표현할 수 있는 최선인듯..?&lt;/em&gt;&lt;/del&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;초기화&lt;/li&gt;
 &lt;/ul&gt;
+&lt;img src=&quot;https://latex.codecogs.com/svg.latex?&amp;amp;space;dp=array&quot; title=&quot;\Large dp=array&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;Subproblem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&quot;https://latex.codecogs.com/svg.latex?&amp;amp;space;dp[i]|_{i=1}^{i=length}=Max(dp[i-1], \sum_{j=0}^idp[j],dp[i])|_{i=1}^{i=length}&quot; title=&quot;\Large dp[i] = Max(dp[i-1], \sum_{j=0}^idp[j],dp[i])&quot;&gt;
+&lt;p&gt;&lt;span style=&quot;color:#aaaaaa; text&quot;&gt;&lt;del&gt;&lt;em&gt;수식이 조금 이상하지만 내가 표현할 수 있는 최선인듯..?&lt;/em&gt;&lt;/del&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 이런느낌&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; left &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; left &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; array&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; left&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; right &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; left&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; right &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; array&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; right&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -41,11 +42,14 @@
 &lt;ul&gt;
 &lt;li&gt;만약 &lt;em&gt;해당 수까지의 최고의 합 + 다음 수&lt;/em&gt; 가 더 크면, 당연히 포함 하는게 더 이득,&lt;/li&gt;
 &lt;li&gt;만약 다음수 자체가 더 크다면 그 음수의 영향이 너무 커서 전체 합을 잡아먹는 것이므로 버리는 게 낫다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;maxValue&lt;/strong&gt; - 위에서 계산된 maxPartitionSum이 결국 그 index에서 최고의 subarray sum 값을 나타내므로, maxPartitionSum 값으로 계속 max를 업데이트 한다.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;strong&gt;maxValue&lt;/strong&gt; - 위에서 계산된 maxPartitionSum이 결국 그 index에서 최고의 subarray sum 값을 나타내므로, maxPartitionSum 값으로 계속 max를 업데이트 한다.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h3&gt;Example&lt;/h3&gt;
-&lt;p&gt;다음의 array가 있다고 해보자.&lt;/p&gt;
-&lt;p&gt;(&lt;a href=&quot;https://www.algoexpert.io/&quot;&gt;AlgoExpert&lt;/a&gt; 문제의 Sample 값이다.)&lt;/p&gt;
+&lt;p&gt;다음의 array가 있다고 해보자.
+(&lt;a href=&quot;https://www.algoexpert.io/&quot;&gt;AlgoExpert&lt;/a&gt; 문제의 Sample 값이다.)&lt;/p&gt;
 &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
       &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/bbace69dd3205a0c978f950b3a164a8c/7b775/ex-arr.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 5.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAP0lEQVQI1x2LSQoAQQjE5v/fUxBsu1wOvmNacykIqU9Vz8MjAsyM7oaZ4d6LQUSQmXD39dMR0br326aq9jv7A+vXRRHNYKAPAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
@@ -57,8 +61,8 @@
 /static/bbace69dd3205a0c978f950b3a164a8c/7b775/ex-arr.png 1445w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
-&lt;p&gt; 
-쪼갤 가능성이 있는 점은 바로 음수인 지점이다.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;쪼갤 가능성이 있는 점은 바로 음수인 지점이다.&lt;/p&gt;
 &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
       &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/27a26405943f1e2b57ed1977af94d30c/7b775/ex-arr1.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 5.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAV0lEQVQI1wXByQ1AQBiAUYU6CM1YE9ogcRInBVgKsH+/jMFIFOE9a5rH9RQj5ZASVDbmeREUWeNRtDHHeiEH7GxoeSm6kKhy0OpiXiYe9ZH3PkntcmvDDxEmP4y3VBFZAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
@@ -71,8 +75,8 @@
   &lt;/a&gt;
     &lt;/span&gt;
 &lt;p&gt; &lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
 &lt;h4&gt;처음 -9에서 쪼갤지 말지를 결정해보자&lt;/h4&gt;
+&lt;p&gt; &lt;/p&gt;
 &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
       &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/a28ae67d5e4b83478ea469525d708330/7b775/ex-arr2.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 5.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAWElEQVQI1wXBzQ1AMACA0cZS1hGWET8Ha+hVnAyAswOtfm2aKhJDeE8oJbTWiXVOsG0pMUas8XRTgZwbnL6wDgwnwb7IpaIeMoK/ONTO7T/6taQdc2J4+AGIDT28YcbC2AAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
@@ -84,12 +88,14 @@
 /static/a28ae67d5e4b83478ea469525d708330/7b775/ex-arr2.png 1445w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
+&lt;p&gt; &lt;/p&gt;
 &lt;p&gt;-9까지의 &lt;em&gt;maxPartitionSum&lt;/em&gt; 를 구해왔다면 3 + 5 - 9 = -1일 것이다.
 따라서 다음 &lt;em&gt;maxPartitionSum&lt;/em&gt; 는 -1 + 1 = 0 과 1 자체 중 큰 수인 1이 된다.&lt;/p&gt;
 &lt;p&gt;이 의미는, 이제 &lt;em&gt;maxPartitionSum&lt;/em&gt; 에 -9까지의 수가 포함되지 않았으므로, 이후 &lt;em&gt;maxPartitionSum&lt;/em&gt; 계산 시 1부터 새로운 sub array를 사용하는 것이다.&lt;/p&gt;
 &lt;p&gt;또한, -9 이전의 최고의 sub array 합인 8이 &lt;em&gt;maxValue&lt;/em&gt; 에 저장되어 있을 것이다.&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;h4&gt;다음으로 -2에서 쪼갤지 말 지 생각해보자&lt;/h4&gt;
+&lt;p&gt; &lt;/p&gt;
 &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
       &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/dffb5e5215fb4d6f743bab3a07987109/7b775/ex-arr3.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 5.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAWUlEQVQI1wXB2w1AMABAURGjGExsYAuPWMAIJL4aO2CAFu1tVL0SQzgnUIvcDnvZfm4oRMxzh2gdYUwAZEj5su8Gg8bbl24sqUSCdyfLqrjdRzvl1EPK5R9+pFk9w7HLtt8AAAAASUVORK5CYII=&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
@@ -101,15 +107,17 @@
 /static/dffb5e5215fb4d6f743bab3a07987109/7b775/ex-arr3.png 1445w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
+&lt;p&gt; &lt;/p&gt;
 &lt;p&gt;-2 까지의 &lt;em&gt;maxPartitionSum&lt;/em&gt; 을 구하면 1 + 3 + -2 = 2 이다.
 따라서 다음 &lt;em&gt;maxPartitionSum&lt;/em&gt; 는 2 + 3 = 5와 3 중 큰 수인 5가 된다.&lt;/p&gt;
 &lt;p&gt;이 의미는, -2로 인해 작아지는 영향이 더 적기 때문에 새로운 sub array로 분리할 필요가 없음을 의미한다.&lt;/p&gt;
 &lt;p&gt;따라서 이 이후로 계속 &lt;em&gt;maxPartitionSum&lt;/em&gt; 은 -9를 만나기 전까지는 또 증가할 것이다.&lt;/p&gt;
 &lt;h4&gt;또다시 만난 -9에서는 어떻게 될까?&lt;/h4&gt;
+&lt;p&gt; &lt;/p&gt;
 &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
       &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/b53f67f78b441d74f799ebc00be90b93/7b775/ex-arr4.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 5.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAV0lEQVQI1w3IuxVAMACG0f+YxRqWMQ2FBYygUDmGoEyReH3xOqEwhNzyyk12uXzw7VhTdinvk7CuYtsECGvFcQjvFT9h34UxWbyLaXY850czFFR9Trhffv8ROb2IbqUTAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
-  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;ex arr4&quot; title=&quot;to -2&quot; src=&quot;/static/b53f67f78b441d74f799ebc00be90b93/f058b/ex-arr4.png&quot; srcset=&quot;/static/b53f67f78b441d74f799ebc00be90b93/c26ae/ex-arr4.png 158w,
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;ex arr4&quot; title=&quot;to another -9&quot; src=&quot;/static/b53f67f78b441d74f799ebc00be90b93/f058b/ex-arr4.png&quot; srcset=&quot;/static/b53f67f78b441d74f799ebc00be90b93/c26ae/ex-arr4.png 158w,
 /static/b53f67f78b441d74f799ebc00be90b93/6bdcf/ex-arr4.png 315w,
 /static/b53f67f78b441d74f799ebc00be90b93/f058b/ex-arr4.png 630w,
 /static/b53f67f78b441d74f799ebc00be90b93/40601/ex-arr4.png 945w,
@@ -117,13 +125,15 @@
 /static/b53f67f78b441d74f799ebc00be90b93/7b775/ex-arr4.png 1445w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
+&lt;p&gt; &lt;/p&gt;
 &lt;p&gt;여기서도 -9 까지의 &lt;em&gt;maxPartitionSum&lt;/em&gt; 을 구하면 1 + 3 -2 + 3 + 4 + 7 + 2 - 9 = 9 이다. 따라서 다음 &lt;em&gt;maxPartitionSum&lt;/em&gt; 은 9 + 6 = 15 와 6 중 큰 수인 15가 된다.&lt;/p&gt;
 &lt;p&gt;이 의미는, 위 -2에서처럼 -9로 인해 작아지는 것 보다 sub array를 유지하는게 합이 더 큰 상황을 의미한다.&lt;/p&gt;
 &lt;h4&gt;마지막, -5에서는?&lt;/h4&gt;
+&lt;p&gt; &lt;/p&gt;
 &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
       &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/fcf437f32ea49b42ac38af424d35dc20/7b775/ex-arr5.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 5.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAT0lEQVQI1yXKyQmAMAAF0U9qsRDbswWL8GQXHhOIkmSyCGoZbqeBx2jdfNjzkadlZJg7rtMQo0hJgPBe1Cpy1uelCGt/C+F9DK0J5/qnBzfJCDbSqDI9IwAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
-  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;ex arr5&quot; title=&quot;to -2&quot; src=&quot;/static/fcf437f32ea49b42ac38af424d35dc20/f058b/ex-arr5.png&quot; srcset=&quot;/static/fcf437f32ea49b42ac38af424d35dc20/c26ae/ex-arr5.png 158w,
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;ex arr5&quot; title=&quot;to -5&quot; src=&quot;/static/fcf437f32ea49b42ac38af424d35dc20/f058b/ex-arr5.png&quot; srcset=&quot;/static/fcf437f32ea49b42ac38af424d35dc20/c26ae/ex-arr5.png 158w,
 /static/fcf437f32ea49b42ac38af424d35dc20/6bdcf/ex-arr5.png 315w,
 /static/fcf437f32ea49b42ac38af424d35dc20/f058b/ex-arr5.png 630w,
 /static/fcf437f32ea49b42ac38af424d35dc20/40601/ex-arr5.png 945w,
@@ -131,6 +141,7 @@
 /static/fcf437f32ea49b42ac38af424d35dc20/7b775/ex-arr5.png 1445w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
+&lt;p&gt; &lt;/p&gt;
 &lt;p&gt;똑같이 -5 까지의 &lt;em&gt;maxPartitionSum&lt;/em&gt;을 구하면 15 + 3 + 1 -5 = 14, 다음 값은 14 + 4 와 4 중 큰 값인 14로 넘어간다. &lt;/p&gt;
 &lt;p&gt;이 뒤에도 계속 수가 나온다면 sub array가 끊어지지 않고 진행되는 것을 의미하지만, &lt;strong&gt;실제로 &lt;em&gt;maxValue&lt;/em&gt; 는 -5 이전인 1까지가 최고의 값이었으므로 1까지의 합이 기록된다.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;이는, &lt;strong&gt;sub array 합게의 시작점은 &lt;em&gt;maxPartitionSum&lt;/em&gt; 이 구분해주고, 합계의 끝 지점은 &lt;em&gt;maxValue&lt;/em&gt; 가 구분해주는 의미&lt;/strong&gt; 로 보인다.&lt;/p&gt;
@@ -146,6 +157,7 @@
 /static/150c1d7543357f9a6206d8984c73da8e/4ed6a/ex-arr6.png 1713w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
   &lt;/a&gt;
     &lt;/span&gt;
+&lt;p&gt; &lt;/p&gt;
 &lt;p&gt;Time Complexity는 1회만 iterate 했으므로 O(N), Space Complexity는 &lt;em&gt;maxPartitionSum&lt;/em&gt; 및 &lt;em&gt;maxValue&lt;/em&gt; 의 두 상수만 사용했으므로 O(1) 이다.&lt;/p&gt;
 &lt;h1&gt;잡설&lt;/h1&gt;
 &lt;p&gt;이 이전까지 마냥 DP 문제만 풀다 보니 너무 DP 생각만 해서 끔찍한 풀이를 생각했다. 어떤 상황에 DP를 쓰고, 어떤 상황에 DP를 사용하지 않을지에 대해 기준을 명확히 알아보고 기억해야겠다.&lt;/p&gt;
