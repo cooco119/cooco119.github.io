@@ -8,7 +8,7 @@ module.exports = {
     description: ``,
     siteUrl: `https://cooco119.github.io/`,
     social: {
-      twitter: ``,
+      twitter: `@JasonLe65151513`,
     },
   },
   plugins: [
