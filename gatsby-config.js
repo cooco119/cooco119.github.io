@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Cooco119 Blog`,
+    title: `Jason's DevLog`,
     author: {
       name: `Jason Lee`,
       summary: ``,
@@ -8,7 +8,7 @@ module.exports = {
     description: ``,
     siteUrl: `https://cooco119.github.io/`,
     social: {
-      twitter: `@JasonLe65151513`,
+      twitter: `@JasonLee_119`,
     },
   },
   plugins: [
