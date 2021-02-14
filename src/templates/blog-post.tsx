@@ -29,6 +29,11 @@ const BlogPostTemplate: React.FC<PageProps<DataProps>>  = ({ data, location }) =
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        <div id="tags" style={{}}>
+          Tags: &nbsp;
+          {post.frontmatter.tag.map(e => <p style={{"display": "inline"}}><label style={{"background": "#cccccc"}}>#{e}</label>&nbsp;</p>)}
+        </div>
+        
         <hr />
         <footer>
           <Bio />
@@ -80,6 +85,7 @@ type DataProps = {
       title: string
       date: string
       description: string
+      tag: string[]
     }
   },
   previous: {
@@ -119,6 +125,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tag
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
