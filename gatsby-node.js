@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
+  const about = path.resolve(`./src/templates/about.tsx`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -19,6 +20,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             fields {
               slug
+            }
+            frontmatter {
+              category
             }
           }
         }
@@ -40,8 +44,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
+  if (posts.filter(elem => elem.frontmatter.category === "blog").length > 0) {
+    posts.filter(elem => elem.frontmatter.category === "blog").forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
@@ -54,6 +58,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           nextPostId,
         },
       })
+    })
+  }
+  if (posts.filter(elem => elem.frontmatter.category === "about").length > 0) {
+    const post = posts.filter(elem => elem.frontmatter.category === "about")[0];
+
+    createPage({
+      path: '/about',
+      component: about,
+      context: {
+        id: post.id,
+      },
     })
   }
 }
@@ -95,6 +110,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Social {
       twitter: String
+      linkedin: String
+      github: String
     }
 
     type MarkdownRemark implements Node {
@@ -107,6 +124,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       tag: [String]
+      category: String
     }
 
     type Fields {

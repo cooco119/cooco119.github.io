@@ -1,0 +1,154 @@
+// import { graphql, Link, PageProps } from "gatsby"
+// import React from "react"
+// import Bio from "../components/bio"
+// import Layout from "../components/layout"
+// import SEO from "../components/seo"
+// import BlogPostTemplate from "./blog-post"
+// import About from "./about"
+
+
+// const PostTemplate: React.FC<PageProps<DataProps>> = (props) => {
+//   const post = props.data.markdownRemark
+//   const siteTitle = props.data.site.siteMetadata?.title || `Title`
+
+//   if (post.frontmatter.category === "blog") {
+//     return (
+//       <BlogPostTemplate
+//         data={props.data}
+//         location={props.location}
+//         path={props.path}
+//         uri={props.uri}
+//         navigate={props.navigate}
+//         children={props.children}
+//         params={props.params}
+//         pathContext={props.pathContext}
+//         pageContext={props.pageContext}
+//         pageResources={props.pageResources}
+//       ></BlogPostTemplate>
+//     )
+//   }
+//   if (post.frontmatter.category === "about") {
+//     return (
+//       <About 
+//         data={props.data}
+//         location={props.location}
+//         path={props.path}
+//         uri={props.uri}
+//         navigate={props.navigate}
+//         children={props.children}
+//         params={props.params}
+//         pathContext={props.pathContext}
+//         pageContext={props.pageContext}
+//         pageResources={props.pageResources}
+//       ></About>
+//     )
+//   }
+//   return (
+//     <Layout location={props.location} title={siteTitle}>
+//       <SEO
+//         title={post.frontmatter.title}
+//         description={post.frontmatter.description || post.excerpt}
+//       />
+//       <article
+//         className="blog-post"
+//         itemScope
+//         itemType="http://schema.org/Article"
+//       >
+//         <header>
+//           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+//           <p>{post.frontmatter.date}</p>
+//         </header>
+//         <section
+//           dangerouslySetInnerHTML={{ __html: post.html }}
+//           itemProp="articleBody"
+//         />
+//         <div id="tags" style={{}}>
+//           Tags: &nbsp;
+//           {post.frontmatter.tag.map(e => <p style={{ "display": "inline" }}><label style={{ "background": "#cccccc" }}>#{e}</label>&nbsp;</p>)}
+//         </div>
+
+//         <hr />
+//       </article>
+//     </Layout>
+//   )
+// }
+
+// export default PostTemplate
+
+// type DataProps = {
+//   site: {
+//     siteMetadata: {
+//       title: string
+//     }
+//   }
+//   markdownRemark: {
+//     id: string,
+//     excerpt: any,
+//     html: string,
+//     frontmatter: {
+//       title: string
+//       date: string
+//       description: string
+//       tag: string[]
+//       category: string
+//     }
+//   },
+//   previous: {
+//     fields: {
+//       slug: string
+//     }
+//     frontmatter: {
+//       title: string
+//     }
+//   }
+//   next: {
+//     fields: {
+//       slug: string
+//     }
+//     frontmatter: {
+//       title: string
+//     }
+//   }
+// }
+
+// export const pageQuery = graphql`
+//   query BlogPostBySlug(
+//     $id: String!
+//     $previousPostId: String
+//     $nextPostId: String
+//   ) {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//     markdownRemark(id: { eq: $id }) {
+//       id
+//       excerpt(pruneLength: 160)
+//       html
+//       frontmatter {
+//         title
+//         date(formatString: "MMMM DD, YYYY")
+//         description
+//         tag
+//         category
+//       }
+//     }
+//     previous: markdownRemark(id: { eq: $previousPostId }) {
+//       fields {
+//         slug
+//       }
+//       frontmatter {
+//         title
+//       }
+//     }
+//     next: markdownRemark(id: { eq: $nextPostId }) {
+//       fields {
+//         slug
+//       }
+//       frontmatter {
+//         title
+//       }
+//     }
+//   }
+// `

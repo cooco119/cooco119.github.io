@@ -3,13 +3,14 @@ module.exports = {
     title: `Jason's DevLog`,
     author: {
       name: `Jason Lee`,
-      summary: ``,
+      summary: `Programmer`,
     },
-    description: ``,
-    siteUrl: `https://cooco119.github.io/`,
+    siteUrl: `https://blog.markan.dev/`,
     social: {
       twitter: `@JasonLee_119`,
-    },
+      linkedin:`https://www.linkedin.com/in/jaejun-lee-4382a4118/`,
+      github: `https://github.com/cooco119`
+    }
   },
   plugins: [
     {
@@ -17,6 +18,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/about`,
+        name: `about`,
       },
     },
     {
@@ -107,6 +115,10 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-sass`,
+      
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

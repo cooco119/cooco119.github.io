@@ -28,7 +28,7 @@ const BlogIndex: React.FC<PageProps<DataProps>> = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
+        {posts.filter(post => post.frontmatter.category === "blog").map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
@@ -81,6 +81,7 @@ type DataProps = {
         date: string
         title: string
         description: string
+        category: string
       }
     }>
   }
@@ -103,6 +104,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          category
         }
       }
     }

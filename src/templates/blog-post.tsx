@@ -3,8 +3,6 @@ import React from "react"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import {Adsense} from "@ctrl/react-adsense";
-
 
 const BlogPostTemplate: React.FC<PageProps<DataProps>>  = ({ data, location }) => {
   const post = data.markdownRemark
@@ -22,13 +20,6 @@ const BlogPostTemplate: React.FC<PageProps<DataProps>>  = ({ data, location }) =
         itemScope
         itemType="http://schema.org/Article"
       >
-        {/* <Adsense
-          client="ca-pub-1472550613966776"
-          slot="7259870550"
-          style={{ display: 'block' }}
-          layout="in-article"
-          format="fluid"
-        /> */}
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
