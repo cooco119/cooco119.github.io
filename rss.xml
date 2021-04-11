@@ -1,21 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason's DevLog]]></title><description><![CDATA[Jason's DevLog]]></description><link>https://cooco119.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 16 Feb 2021 15:39:40 GMT</lastBuildDate><item><title><![CDATA[스타트업인가 대기업인가]]></title><description><![CDATA[채용 하는 입장에서 쓴 글을 만나다 어쩌다보니 흘러흘러 8퍼센트 CTO님인 이호성님의 awesome-devteam 리포를 가게 되었고, 거기서 채용에 대한 한 글을 만나게 되었다  우리 회사의 개발자 인터뷰. knowre라는 회사의 CTO…]]></description><link>https://cooco119.github.io/startups-and-big-companies/</link><guid isPermaLink="false">https://cooco119.github.io/startups-and-big-companies/</guid><pubDate>Mon, 15 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;채용 하는 입장에서 쓴 글을 만나다&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason's DevLog]]></title><description><![CDATA[Jason's DevLog]]></description><link>https://blog.markan.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 11 Apr 2021 12:07:28 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[Hello world! 안녕하세요! 이력 Platform Software Engineer, PUBG (2019.07 ~) Bachelor of Engineering, KAIST (2012.02 ~ 2019.08)]]></description><link>https://blog.markan.dev/</link><guid isPermaLink="false">https://blog.markan.dev/</guid><content:encoded>&lt;p&gt;Hello world!&lt;/p&gt;
+&lt;p&gt;안녕하세요!&lt;/p&gt;
+&lt;h1&gt;이력&lt;/h1&gt;
+&lt;h4&gt;Platform Software Engineer, PUBG (2019.07 ~)&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Backend Development in Outgame Premium Contents
+- General Shop &amp;amp; Inventory Services
+- Fantasy BR Outgame Backend Service
+- Survivor Pass 8, 9, 10
+- Battle Bride Pass&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Bachelor of Engineering, KAIST (2012.02 ~ 2019.08)&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- Major in Aerospace Engineering
+- Minor in Computer Science
+- Lead guitar player in Sixline, Acustic Guitar Club&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[스타트업인가 대기업인가]]></title><description><![CDATA[채용 하는 입장에서 쓴 글을 만나다 어쩌다보니 흘러흘러 8퍼센트 CTO님인 이호성님의 awesome-devteam 리포를 가게 되었고, 거기서 채용에 대한 한 글을 만나게 되었다  우리 회사의 개발자 인터뷰. 저자는 knowre라는 회사의 CTO…]]></description><link>https://blog.markan.dev/startups-and-big-companies/</link><guid isPermaLink="false">https://blog.markan.dev/startups-and-big-companies/</guid><pubDate>Mon, 15 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;채용 하는 입장에서 쓴 글을 만나다&lt;/h1&gt;
 &lt;p&gt;어쩌다보니 흘러흘러 8퍼센트 CTO님인 이호성님의 &lt;a href=&quot;https://github.com/leehosung/awesome-devteam&quot;&gt;awesome-devteam&lt;/a&gt; 리포를 가게 되었고, 거기서 채용에 대한 한 글을 만나게 되었다 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.kivol.net/post/138587457933/%EC%9A%B0%EB%A6%AC-%ED%9A%8C%EC%82%AC%EC%9D%98-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%9D%B8%ED%84%B0%EB%B7%B0&quot;&gt;우리 회사의 개발자 인터뷰&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;knowre라는 회사의 CTO님이 쓰신 듯한 글인데, ‘스타트업 채용’에 관해 재미있는 말이 있었다. &lt;/p&gt;
+&lt;p&gt;저자는 knowre라는 회사의 CTO이신듯 한데, ‘스타트업 채용’에 관해 재미있는 말이 있었다. &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;구글같은 거대한 시스템의 프로그래머라면 그런 알고리즘의 작은 개선으로 25만불어치의 절약효과를 낼 수 있을지 모른다. 하지만 스타트업에서 그런 튜닝이 가져오는 결과는 미미하다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;결국 서비스나 어플리케이션을 만드는 - 업계의 대부분을 차지하는 - 스타트업은 그런 알고리즘 튜닝보다는 생산성이 중요하게 된다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;이 구절을 보고, 오히려 이런 차이점으로 내가 가고자 하는 방향성에 대해 고민해보는것도 좋겠다는 생각이 들었다.&lt;/p&gt;
+&lt;p&gt;이 구절을 보고, 오히려 이런 차이점 - 기업이 내게 기대하는 기준의 차아 - 으로 내가 가고자 하는 방향성에 대해 고민해보기로 했다.&lt;/p&gt;
 &lt;h1&gt;최고의 기술자 vs 빠른 프로토타이퍼&lt;/h1&gt;
 &lt;p&gt;결국에는 해당 조직에서 해당 인재에게 기대하는 역할의 차이가 채용에서 드러나는게 아닐까 한다. 구글의 소프트웨어 엔지니어에게는 마치 &lt;strong&gt;최고의 기술자&lt;/strong&gt;로서, 이미 정해진 사업 방향과 돌아가고 있는 서비스를 고도화해서 &lt;em&gt;최고의 효율&lt;/em&gt;로 &lt;em&gt;자동화된 안정성&lt;/em&gt;으로 돌아가게 하는 것이 최우선으로 기대되는 역할일 것이다. 반면에 스타트업에서는 &lt;strong&gt;빠른 프로토타이퍼&lt;/strong&gt;로서, 당장 프로덕트의 고도화 보다는 마켓 피드백에 따라 빠르게 새로운 제품을 개발할 수 있도록 &lt;em&gt;유연한 설계&lt;/em&gt;와 &lt;em&gt;협업 가능한 능력&lt;/em&gt;이 더 요구되는 역할일 수 있다. &lt;/p&gt;
 &lt;p&gt;(물론 양 측 모두 둘 다의 성향을 다 가진 인재를 얻는게 최고일 수 있겠지만, 우선순위를 따지자면 그렇지 않을까 추측해본다)&lt;/p&gt;
 &lt;h1&gt;그래서 나는?&lt;/h1&gt;
-&lt;p&gt;나는 90점에서 100점을 만드는 것을 좋아하기 보다는 50점에서 80점 만드는데에 더 재미를 느끼고 잘 하는 사람인 것 같다. 항상 뭔가 시작하면 일정 수준까지 올라가는 데에 빠르게 배우고 엄청나게 재미를 느끼지만, 그 이후 끝심이 부족하다고 해야될지, 항상 완벽까지는 추구하지 못했던 것 같다. 게임이나 드라마도 항상 이것저것 흥미를 가지고 시작해보지만 정작 엔딩을 본 게임과 드라마는 많지 않은 그런 스타일이다. &lt;/p&gt;
+&lt;p&gt;나는 이미 완성되어있는 프로덕트를 더 깊게 고도화하기를 좋아하기 보다는 아예 처음부터 눈에 보이는 변화를 관찰하면서 from the scratch로 만드는데에 더 재미를 느끼고 잘 하는 사람인 것 같다. 항상 뭔가 시작하면 일정 수준까지 올라가는 데에 빠르게 배우고 엄청나게 재미를 느끼지만, 그 이후 끝심이 부족하다고 해야될지, 항상 완벽까지는 추구하지 못했던 것 같다. 게임이나 드라마도 항상 이것저것 흥미를 가지고 시작해보지만 정작 엔딩을 본 게임과 드라마는 많지 않은 그런 스타일이다. &lt;/p&gt;
 &lt;p&gt;물론, 인생을 살면서 최소한 몇가지 부분에서는 그 누구보다 잘 아는 상위 1%가 되어야 한다고 생각하고 그렇게 하려고 노력한다. 하지만 전반적으로는 그런 성향의 사람이고, 그런 모습들이 오히려 빠르게 만들고 마켓핏을 보는 스타트업계와 더 맞지 않을까 하는 생각도 든다. &lt;/p&gt;
 &lt;h1&gt;대기업에 대한 불안 - 은퇴 후 뭐먹고 살지&lt;/h1&gt;
 &lt;p&gt;대기업으로 가더라도, 결국 내가 개발자 또는 개발 매니저로서 50대 이후에 살아남을 수 있는가? 하면 No라고 단언할 수 있다. 나보다 실력있는 사람은 훨씬 많고, 점점 더 많아질 것이다. 그래서 실시간 능력치로 승부하는 ‘연봉 소득’은 어느정도 한계가 있지 않을까 싶다. &lt;/p&gt;
@@ -34,7 +46,7 @@
 &lt;h1&gt;맺으며&lt;/h1&gt;
 &lt;p&gt;내가 생각하는 스타트업 업계가 실제로 그러한지도 더 조사를 해봐야겠고 또 아직 확답은 내리지 못했지만, 나 스스로에 대해 한가지의 힌트를 얻게되는 좋은 기회였다. &lt;/p&gt;
 &lt;p&gt;주변에서 ‘내가 가고자 하는 방향에 이미 가있는 사람에게 연락해보라’는 조언을 들었고, 그 내용을 실천해볼 예정이다. 분야와 규모별로 나누어서 어떤 질문을 할 지 정리하고, 메일을 돌려볼 예정이다.&lt;/p&gt;
-&lt;p&gt;추가로, EO라는 평소에 유튜브로 즐겨보던 플랫폼에서 내가 고민하고있는 커리어 관련 고민에 대해 이야기를 나누는 세션이 있어서 신청해보았다. 거기서 또 얻게되는 내용들을 정리해보자.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Engineering Ladder에 빗대어 본 2020년과, 21년의 노력 방향]]></title><description><![CDATA[20년 말 ~ 21년 초의 불안감 2020년은 내 커리어에서 처음으로…]]></description><link>https://cooco119.github.io/2020-engineering-ladder-review/</link><guid isPermaLink="false">https://cooco119.github.io/2020-engineering-ladder-review/</guid><pubDate>Sun, 14 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;20년 말 ~ 21년 초의 불안감&lt;/h1&gt;
+&lt;p&gt;추가로, EO라는 평소에 유튜브로 즐겨보던 플랫폼에서 내가 고민하고있는 커리어 관련 고민에 대해 이야기를 나누는 세션이 있어서 신청해보았다. 거기서 또 얻게되는 내용들을 정리해보자.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Engineering Ladder에 빗대어 본 2020년과, 21년의 노력 방향]]></title><description><![CDATA[20년 말 ~ 21년 초의 불안감 2020년은 내 커리어에서 처음으로…]]></description><link>https://blog.markan.dev/2020-engineering-ladder-review/</link><guid isPermaLink="false">https://blog.markan.dev/2020-engineering-ladder-review/</guid><pubDate>Sun, 14 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;20년 말 ~ 21년 초의 불안감&lt;/h1&gt;
 &lt;p&gt;2020년은 내 커리어에서 처음으로 1년을 꽉 채워서 열심히 일을 한 첫 해였다. 되돌아보니 뭔가 앞에 주어진 일들을 열심히 치워왔지만, 어떤 정해진 기준을 가지고 열심히 한 것 보다는 &lt;strong&gt;내가 막연하게 생각한 기준&lt;/strong&gt;(당장 회사에서 급한 일)으로 일을 열심히 하려 했던 것 같다(하지만 보상은 당연히 잘 받으면 좋겠다고 생각한다 ㅋㅋ). 기준을 어느정도 잡고 일을 한다면 일도 성공적으로 해내는 것 뿐만 아니라 내 커리어도 더 잘 챙길 수 있을 거라 생각한다.&lt;/p&gt;
 &lt;p&gt;행동 기준이 없어서 그랬는지, 11월 초까지 열심히 달린 뒤에는 뭘 어떤식으로 열심히 해야할 지 잘 기준이 안서서(재택근무도 있었지만) 그 전만큼 몰입하지는 못했던 것 같다. 그 전에는 당장 눈앞에 해야할 일과 일정이 있으니 달려왔지만, 오히려 일정도 없고 정해진 급한 일이 없으니 갈 길을 잃은 상태였고, 마음은 뭔가를 해야할 것 같은데 실제로 뭔가 잘 되지는 않으니 불안하기도 했던 것 같다.&lt;/p&gt;
 &lt;p&gt;내가 어느 방향으로 어떻게 가야할지에 대한 고민과 함께, 어떤 기준으로 능력치를 쌓아야 할지에 대한 고민을 정리해보고자 한다. Engineering Ladder 프레임워크를 통해 내 상태를 진단하고 각 부문별로 어떤 노력을 해야할지를 정리해보았다.&lt;/p&gt;
@@ -223,7 +235,7 @@
 &lt;/table&gt;
 &lt;p&gt;위 단계에 해당하는 Engineering Ladder의 직급은 D1 (Developer Level 1)이다. 다음 단계인 D2에는 System, People, Process에서 한 단계씩 증가한다. 21년 말에는 최소한 그정도의 능력은 가질 수 있도록 해보자.&lt;/p&gt;
 &lt;h2&gt;잡생각&lt;/h2&gt;
-&lt;p&gt;2년차인데, 이런 분석을 해볼때면 아직도 한참 모자란 것 같다. 개발자 평균 연차별 어느정도 성장 곡선(?) 같은게 있어서 비교해볼 수 있으면 좋을 것 같다. (온라인 심리 테스트마냥 년차 적고 위 각 항목별로 질문지를 만들어서 입력하면 자동으로 단계 분석해주는 사이트를 만들어도 &lt;del&gt;편할 것&lt;/del&gt; 재미있을 것 같다. 전체 통계도 있어서 내가 어디쯤 와있는지도 알려주고)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Kadane's Algorithm]]></title><description><![CDATA[unsorted int array가 있을 때, 이 array의 subarray 중 sum이 가장 큰 subarray를 구하는 방법, Time: O(N), Space: O(1) My first approach ‘뭔가 DP…]]></description><link>https://cooco119.github.io/Kadanes-algorithm/</link><guid isPermaLink="false">https://cooco119.github.io/Kadanes-algorithm/</guid><pubDate>Tue, 05 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;2년차인데, 이런 분석을 해볼때면 아직도 한참 모자란 것 같다. 개발자 평균 연차별 어느정도 성장 곡선(?) 같은게 있어서 비교해볼 수 있으면 좋을 것 같다. (온라인 심리 테스트마냥 년차 적고 위 각 항목별로 질문지를 만들어서 입력하면 자동으로 단계 분석해주는 사이트를 만들어도 &lt;del&gt;편할 것&lt;/del&gt; 재미있을 것 같다. 전체 통계도 있어서 내가 어디쯤 와있는지도 알려주고)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Kadane's Algorithm]]></title><description><![CDATA[unsorted int array가 있을 때, 이 array의 subarray 중 sum이 가장 큰 subarray를 구하는 방법, Time: O(N), Space: O(1) My first approach ‘뭔가 DP…]]></description><link>https://blog.markan.dev/Kadanes-algorithm/</link><guid isPermaLink="false">https://blog.markan.dev/Kadanes-algorithm/</guid><pubDate>Tue, 05 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;unsorted int array가 있을 때, 이 array의 subarray 중 sum이 가장 큰 subarray를 구하는 방법, Time: O(N), Space: O(1)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;My first approach&lt;/h2&gt;
