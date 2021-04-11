@@ -85,6 +85,7 @@ type DataProps = {
       date: string
       description: string
       tag: string[]
+      hide: boolean
     }
   },
   previous: {
@@ -125,6 +126,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tag
+        show
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

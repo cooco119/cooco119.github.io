@@ -125,6 +125,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       tag: [String]
       category: String
+      show: Boolean
     }
 
     type Fields {

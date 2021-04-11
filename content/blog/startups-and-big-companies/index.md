@@ -4,6 +4,7 @@ date: "2021-02-15"
 description: "나는 어디로 가야하는가? 나는 '기존 시스템을 0.1% 개선하는걸 좋아하는 사람'인가 '없던 서비스를 만드는걸 좋아하는 사람'인가?로 시작한 의식의 흐름"
 tag: ["career", "startup", "big-tech-company"]
 category: "blog"
+show: false
 ---
 # 채용 하는 입장에서 쓴 글을 만나다
 어쩌다보니 흘러흘러 8퍼센트 CTO님인 이호성님의 [awesome-devteam](https://github.com/leehosung/awesome-devteam) 리포를 가게 되었고, 거기서 채용에 대한 한 글을 만나게 되었다 
