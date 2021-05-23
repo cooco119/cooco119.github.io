@@ -8,7 +8,8 @@ show: true
 ---
 * Repo : https://github.com/cooco119/spring-aws-practice
 * 책 : [`스프링부트와 AWS로 혼자 구현하는 웹서비스`](http://m.yes24.com/Goods/Detail/83849117)
-*일단은 리포 Readme 내용을 그대로 긁어왔다. 추후에 정리해보자*
+  
+> *일단은 리포 Readme 내용을 그대로 긁어왔다. 추후에 정리해보자*
 
 ## 왜 하나요?
 
