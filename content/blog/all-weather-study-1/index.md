@@ -3,7 +3,7 @@ title: "[WIP] 올웨더 포트폴리오 사전 공부 문답"
 date: "2021-04-11"
 description: "김단테님의 '올웨더 절대 하지 마세요' 글에 나온 질문들을 답하기 위해 공부하고, 그 답을 정리해 보았다."
 tag: ["money-management", "all-weather-portfolio", "finance"]
-category: "blog"
+category: "draft"
 show: false
 ---
 # 들어가며

@@ -3,7 +3,7 @@ title: "스타트업인가 대기업인가"
 date: "2021-02-15"
 description: "나는 어디로 가야하는가? 나는 '기존 시스템을 0.1% 개선하는걸 좋아하는 사람'인가 '없던 서비스를 만드는걸 좋아하는 사람'인가?로 시작한 의식의 흐름"
 tag: ["career", "startup", "big-tech-company"]
-category: "blog"
+category: "draft"
 show: false
 ---
 # 채용 하는 입장에서 쓴 글을 만나다
